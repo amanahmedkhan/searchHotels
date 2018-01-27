@@ -1,0 +1,16 @@
+<!-- {{vm.name}} -->
+<!-- <div ng-show="vm.showMessage">
+    hgcgcg
+</div> -->
+<form ng-submit="vm.submitForm()">
+    <div ng-repeat="empty in vm.emptyField">
+        feild required {{empty}}
+    </div>
+    <label for="from">From</label>
+    <input type="date" ng-model="vm.fromDate">
+    </input>
+    <label for="to">To</label>
+    <input type="date" ng-model="vm.toDate">
+    </input>
+    <input type="submit" value="Submit">
+</form>

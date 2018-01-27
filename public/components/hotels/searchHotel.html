@@ -1,0 +1,14 @@
+<div class="container">
+	<aside class="sidebar">
+		<input type="text" ng-model="vm.nameFilter" ng-change="vm.nameFilterHotel(vm.nameFilter)">
+		{{vm.priceFilter}}
+		<input type="range" ng-model="vm.priceFilter" ng-change="vm.filterHotels(vm.priceFilter)" min="0" max="200">
+	</aside>
+	<section class="hotalListing">
+		<article ng-repeat="hotel in vm.hotels" class="cart">
+			<h2>{{hotel.name}}</h2>
+			<div class="priceTag"><span>Price:</span> {{hotel.price}} AED</div>
+			<div class="city"><span>City:</span> {{hotel.city}}</div>
+		</article>
+	</section>
+</div>
